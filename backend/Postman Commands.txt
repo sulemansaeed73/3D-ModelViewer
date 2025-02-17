@@ -1,0 +1,15 @@
+For Auth
+GET
+http://localhost:5000/auth
+
+For Creating Bucket
+POST
+http://localhost:5000/check-create-bucket
+
+For Checking All the Buckets
+GET
+https://developer.api.autodesk.com/oss/v2/buckets
+
+For Checking Objects in Bucket
+GET
+https://developer.api.autodesk.com/oss/v2/buckets/bucket-1738329722050/objects
