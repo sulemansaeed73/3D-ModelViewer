@@ -23,21 +23,49 @@ function User({ id }) {
   }, [id]);
 
   return (
-    <div>
-      <p className="text-3xl font-medium text-center mt-4">User Details</p>
-      {user && (
-        <div className="flex flex-col gap-2 mt-4 p-4 ">
-          <label className="text-xl font-medium">Username </label>
-          <p className="border p-2 text-x1 text-red-800 font-medium">{user.username}</p>
-          <label className="text-xl font-medium">Email </label>
-          <p className="border p-2 text-x1 text-red-800 font-medium">{user.email}</p>
-          <label className="text-xl font-medium">Country </label>
-          <p className="border p-2 text-x1 text-red-800 font-medium">{user.country}</p>
-          <label className="text-xl font-medium">Gender </label>
-          <p className="border p-2 text-x1 text-red-800 font-medium">{user.gender}</p>
+    <div className="max-w-md mx-auto my-10 bg-white shadow-lg rounded-lg p-6">
+    <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
+      User Details
+    </h2>
+    {user ? (
+      <div className="space-y-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700">
+            Username
+          </label>
+          <p className="mt-1 p-2 border border-gray-300 rounded-md text-gray-800">
+            {user.username}
+          </p>
         </div>
-      )}
-    </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700">
+            Email
+          </label>
+          <p className="mt-1 p-2 border border-gray-300 rounded-md text-gray-800">
+            {user.email}
+          </p>
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700">
+            Country
+          </label>
+          <p className="mt-1 p-2 border border-gray-300 rounded-md text-gray-800">
+            {user.country}
+          </p>
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700">
+            Gender
+          </label>
+          <p className="mt-1 p-2 border border-gray-300 rounded-md text-gray-800">
+            {user.gender}
+          </p>
+        </div>
+      </div>
+    ) : (
+      <p className="text-center text-gray-500">User details not available.</p>
+    )}
+  </div>
   );
 }
 
