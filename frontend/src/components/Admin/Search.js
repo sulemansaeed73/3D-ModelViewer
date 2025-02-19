@@ -54,66 +54,66 @@ function Search({ display, resetClicked, currentPage }) {
 
   return (
     <div className="search-page">
-      <div className="lg:flex lg:gap-1 block p-2">
-        <div className="flex flex-col">
-          <label htmlFor="username">Name</label>
-          <input
-            className="p-1"
-            id="username"
-            value={username}
-            placeholder="Type Name"
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div className="flex flex-col">
-          <label htmlFor="email">Email</label>
-          <input
-            className="p-1"
-            id="email"
-            value={email}
-            placeholder="Type Email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="flex flex-col">
-          <label htmlFor="country">Country</label>
-          <input
-            className="p-1"
-            id="country"
-            value={country}
-            placeholder="Type Country Name"
-            onChange={(e) => setCountry(e.target.value)}
-          />
-        </div>
-        <div className="flex flex-col">
-          <label htmlFor="gender">Gender</label>
-          <select
-            className="w-[15rem]"
-            id="gender"
-            value={gender}
-            onChange={(e) => setGender(e.target.value)}
-          >
-            <option value="" disabled>
-              Select Gender
-            </option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-        </div>
-        <button
-          className="text-base rounded h-9 mt-6 w-[7rem] border bg-gradient-to-r from-blue-500 to-indigo-600 text-white"
-          onClick={SearchUser}
-        >
-          Search
-        </button>
-        <button
-          onClick={resetSearch}
-          className="text-base rounded h-9 mt-6 w-[7rem] border bg-red-500 text-white"
-        >
-          Reset
-        </button>
+    <div className="lg:flex lg:gap-1 block p-2">
+      <div className="flex flex-col">
+        <label className=" text-left text-xs font-medium text-gray-900 uppercase tracking-wider" htmlFor="username">Name</label>
+        <input
+          className="p-1"
+          id="username"
+          value={username}
+          placeholder="Type Name"
+          onChange={(e) => setName(e.target.value)}
+        />
       </div>
+      <div className="flex flex-col">
+        <label className=" text-left text-xs font-medium text-gray-900 uppercase tracking-wider" htmlFor="email">Email</label>
+        <input
+          className="p-1"
+          id="email"
+          value={email}
+          placeholder="Type Email"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </div>
+      <div className="flex flex-col">
+        <label className=" text-left text-xs font-medium text-gray-900 uppercase tracking-wider" htmlFor="country">Country</label>
+        <input
+          className="p-1"
+          id="country"
+          value={country}
+          placeholder="Type Country Name"
+          onChange={(e) => setCountry(e.target.value)}
+        />
+      </div>
+      <div className="flex flex-col">
+        <label className=" text-left text-xs font-medium text-gray-900 uppercase tracking-wider" htmlFor="gender">Gender</label>
+        <select
+          className="w-[15rem]"
+          id="gender"
+          value={gender}
+          onChange={(e) => setGender(e.target.value)}
+        >
+          <option value="" disabled>
+            Select Gender
+          </option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <button
+        className="text-base rounded h-9 mt-4 w-[7rem] border bg-gradient-to-r from-blue-500 to-indigo-600 text-white"
+        onClick={SearchUser}
+      >
+        Search
+      </button>
+      <button
+        onClick={resetSearch}
+        className="text-base rounded h-9 mt-4 w-[7rem] border bg-red-500 text-white"
+      >
+        Reset
+      </button>
     </div>
+  </div>
   );
 }
 
